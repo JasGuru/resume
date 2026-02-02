@@ -1,0 +1,47 @@
+/* Container for two columns with center line */
+.row-divider {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  gap: 30px;
+}
+
+.row-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #ccc;
+  transform: translateX(-50%);
+}
+
+.column-divider {
+  flex: 1;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.education-item,
+.experience-item {
+  margin-bottom: 30px;
+}
+
+/* Responsive: remove center line on smaller screens */
+@media (max-width: 992px) {
+  .row-divider {
+    flex-direction: column;
+  }
+  .row-divider::before {
+    display: none;
+  }
+  .column-divider {
+    padding: 0;
+  }
+}
