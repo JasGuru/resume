@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jason M. Valguna | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="profile">
+        <img src="profile-j.png" alt="Profile Image">
+
+        <h1 class="typing-text">
+            I'm &nbsp; <span class="typed" data-typed-items="Jason M. Valguna, IT Support"></span>
+        </h1>
+
+        <p>Welcome to my professional portfolio</p>
+
+			<div class="hero-buttons">
+				<a href="#resume" class="btn">View Resume</a>
+				<a href="Jason-Resume.docx" class="download-btn" download>
+				<i class="fa-solid fa-download"></i> Download Resume
+				</a>
+				
+		</div>
+    </div>
+</section>
+
+<!-- RESUME SECTION -->
+<section id="resume" class="resume-section">
+    <div class="resume-container">
+	
+        <h2>Resume</h2>
+
+ 
+        <!-- Professional Experience -->
+        <div class="resume-block">
+            <h3>Professional Experience</h3>
+
+            <h4>Operations & IT Support Associate</h4>
+            <p><strong>TopTrader Marketing Corporation</strong></p>
+            <p>Paliparan Technopark, Dasmariñas</p>
+            <p>January 8, 2024 – Present</p>
+
+            <ul>
+                <li>Reconciled sales receipts against entries submitted by sales personnel to ensure accuracy.</li>
+                <li>Encoded, backed up, and maintained Extruck sales data in QuickBooks.</li>
+                <li>Managed and updated customer records, enrollment details, routes, account changes, and QR codes.</li>
+                <li>Prepared accurate Extruck Loading Forms to support smooth delivery operations.</li>
+                <li>Generated and distributed daily, weekly, and monthly Matrix reports.</li>
+                <li>Monitored promotions, new SKUs, and price adjustments.</li>
+                <li>Provided IT support (hardware, software, network, printer).</li>
+                <li>Performed file management, document scanning, and computer reformatting.</li>
+            </ul>
+        </div>
+
+        <!-- Key Contributions -->
+        <div class="resume-block">
+            <h3>Key Contributions</h3>
+            <ul>
+                <li>Ensured high accuracy of financial and operational reports.</li>
+                <li>Supported uninterrupted business operations through timely technical support.</li>
+                <li>Improved data integrity and system reliability.</li>
+                <li>Enabled sales teams to effectively track performance and targets.</li>
+            </ul>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="resume-block">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Sales & Financial Reporting (Daily, Weekly, Monthly)</li>
+                <li>Customer Database Management</li>
+                <li>Microsoft Excel (Formulas, Reports, Data Validation)</li>
+                <li>Microsoft Word & Office Applications</li>
+                <li>Basic Web Programming (HTML, CSS, JavaScript)</li>
+                <li>Data Backup & File Management</li>
+                <li>Computer Troubleshooting (Hardware & Software)</li>
+                <li>Network & Printer Configuration</li>
+                <li>System Maintenance & Computer Reformatting</li>
+            </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="resume-block">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Attention to Detail</li>
+                <li>Analytical Thinking</li>
+                <li>Time Management</li>
+                <li>Effective Communication</li>
+                <li>Adaptability & Willingness to Learn</li>
+                <li>Team Collaboration</li>
+                <li>Reliability & Strong Work Ethic</li>
+                <li>Ability to Work Independently</li>
+            </ul>
+        </div>
+
+        <!-- Training & Seminars -->
+      <div class="resume-block">
+		<h3>Training & Seminars</h3>
+		
+		<ul class="training-list">
+
+        <li onclick="showCert('cert1')">
+            How to Start Coding – October 2020
+        </li>
+        <img id="cert1" src="certificates/cert1.jpg" class="cert-img">
+
+        <li onclick="showCert('cert2')">
+            ICT Trends: Cybersecurity Government Initiatives – October 2020
+        </li>
+        <img id="cert2" src="certificates/cert2.jpg" class="cert-img">
+
+        <li onclick="showCert('cert3')">
+            ICT Trends: Data Privacy Law and Its Mandate – October 2020
+        </li>
+        <img id="cert3" src="certificates/cert3.jpg" class="cert-img">
+
+        <li onclick="showCert('cert4')">
+            Hot Skills for Higher-Value Jobs – October 2020
+        </li>
+        <img id="cert4" src="Hot Skills to Learn for Higher Value Jobs Certificate.jpg" class="cert-img">
+
+        <li onclick="showCert('cert5')">
+            Developing Outstanding Leadership Skills – October 2020
+        </li>
+        <img id="cert5" src="Developing Outstanding Leadership Skills.jpg" class="cert-img">
+
+        <li onclick="showCert('cert6')">
+            Institutional Roles in Ethics Review of Research – September 2020
+        </li>
+        <img id="cert6" src="certificates/cert6.jpg" class="cert-img">
+    </ul>
+	
+	</div>
+</section>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const typedElement = document.querySelector(".typed");
+    const items = typedElement.getAttribute("data-typed-items");
+    const typedStrings = items.split(",");
+
+    new Typed(".typed", {
+        strings: typedStrings,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true
+    });
+});
+</script>
+
+<script>
+function showCert(id) {
+    const allCerts = document.querySelectorAll(".cert-img");
+
+    // Hide all first
+    allCerts.forEach(img => {
+        img.style.display = "none";
+    });
+
+    // Show selected
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
