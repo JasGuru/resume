@@ -1,0 +1,196 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* prevent sideways scroll */
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("tech.png") no-repeat center center/cover;
+    padding: 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    z-index: 1;
+}
+
+.profile {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* PROFILE IMAGE */
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+
+/* TYPING TEXT */
+.typing-text {
+    min-height: 45px; /* prevents movement */
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.typed {
+    color: #00bfff;
+}
+
+/* SUBTITLE */
+.profile p {
+    color: #ddd;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+.hero-buttons {
+    display: flex;
+    flex-direction: column; /* stack on mobile */
+    gap: 10px;
+}
+
+.hero-buttons a,
+.hero-buttons button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+/* Colors */
+.btn { background: #2a5298; }
+.download-btn { background: #007bff; }
+.print-btn { background: #28a745; }
+
+/* =========================
+   RESUME SECTION
+========================= */
+.resume-section {
+    padding: 30px 15px;
+    background: #f4f6f9;
+}
+
+.resume-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resume-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #2a5298;
+}
+
+.resume-block {
+    margin-bottom: 20px;
+}
+
+.resume-block h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #2a5298;
+}
+
+.resume-block h4 {
+    font-size: 15px;
+}
+
+.resume-block p,
+.resume-block li {
+    font-size: 14px;
+}
+
+.resume-block ul {
+    padding-left: 18px;
+}
+
+/* =========================
+   DESKTOP RESPONSIVE
+========================= */
+@media (min-width: 768px) {
+
+    .profile {
+        max-width: 800px;
+    }
+
+    .profile img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .typing-text {
+        font-size: 28px;
+        min-height: 60px;
+    }
+
+    .profile p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: row; /* side by side on desktop */
+        justify-content: center;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: auto;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+
+    .resume-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .resume-container h2 {
+        font-size: 28px;
+    }
+
+    .resume-block h3 {
+        font-size: 20px;
+    }
+}
